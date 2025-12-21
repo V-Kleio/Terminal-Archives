@@ -288,3 +288,39 @@ Ready to begin your training?
 ---
 
 *Authorized Personnel Only. Document Classification: <span class="redacted">Level 3</span>*
+
+<span class="evidence">A-47</span>
+
+<div class="case-file">
+### Case #1984-A
+Victim: John Doe
+Location: <span class="redacted">Baker Street</span>
+</div>
+
+<div class="tape">
+    <div class="note">
+    Detective's note: Subject was last seen at 11:45 PM...
+    </div>
+</div>
+
+<div class="timeline">
+<p class="timeline-date">23:45 - November 12</p>
+<p>Last known sighting of victim</p>
+</div>
+
+<div class="police-tape">⚠ Crime Scene - Do Not Cross ⚠</div>
+
+<div class="tape">
+    <div class="witness">
+    "I heard a scream around midnight, then footsteps running away..." - Mrs. Henderson
+    </div>
+</div>
+
+<div class="blood-warning">
+  **CAUTION:** Biological evidence found at scene. Handle with extreme care.
+</div>
+
+<div class="suspect">
+  <img src="images/avatar.png" alt="Suspect">
+  <div class="suspect-name">John Doe - Prime Suspect</div>
+</div>
