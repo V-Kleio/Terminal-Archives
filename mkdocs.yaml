@@ -31,7 +31,7 @@ theme:
         name: Switch to light mode
 
   font:
-    text: Merriweather
+    text: Inter
     code: JetBrains Mono
 
   features:
@@ -120,3 +120,7 @@ extra:
 # Navigation Structure
 nav:
   - Home: index.md
+
+  - Shell:
+    - Intro to Shell: module1/01_intro.md
+    - Navigating Shell: module1/02_navigation.md

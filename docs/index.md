@@ -153,7 +153,7 @@ The `#!python range()` function is useful, and `#!bash git status` shows reposit
 
 ## Keyboard Keys
 
-Press ++ctrl+c++ to cancel a command.
+Press ++ctrl+c++ to cancel a command. ++shift++
 
 Use ++ctrl+shift+t++ to open a new terminal tab.
 
@@ -176,7 +176,7 @@ The HTML specification is maintained by the W3C.
 
 [External Link](https://github.com){ .md-button }
 
-[Primary Button](module1/01_basics.md){ .md-button .md-button--primary }
+[Primary Button](module1/01_intro.md){ .md-button .md-button--primary }
 
 ## Images
 
@@ -283,7 +283,7 @@ Learn to track changes and collaborate.
 
 Ready to begin your training?
 
-[Start Module 1: Shell Basics](module1/01_basics.md){ .md-button .md-button--primary }
+[Start Module 1: Shell Basics](module1/01_intro.md){ .md-button .md-button--primary }
 
 ---
 
@@ -298,7 +298,7 @@ Location: <span class="redacted">Baker Street</span>
 </div>
 
 <div class="tape">
-    <div class="note">
+    <div class="handwritten">
     Detective's note: Subject was last seen at 11:45 PM...
     </div>
 </div>

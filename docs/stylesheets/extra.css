@@ -189,8 +189,7 @@ body::before {
     border-color: #6b5d4f;
 }
 
-/* Typewriter Text - Old investigation notes */
-.note {
+.handwritten {
     padding: 30px 16px;
     background: #f7f3b7;
     color: #1a1a1a;
@@ -208,7 +207,7 @@ body::before {
 
 
 /* Dark Mode: Dark File Folder styling */
-[data-md-color-scheme="slate"] .note {
+[data-md-color-scheme="slate"] .handwritten {
     background-color: #2a2a2a;
     background-image: linear-gradient(to bottom right, #2a2a2a, #222);
     color: #e0e0e0;
