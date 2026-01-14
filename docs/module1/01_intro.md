@@ -1,20 +1,18 @@
 # LOG ENTRY #CLI-01
 
-<div class="stamp-box">Status: ARCHIVED</div>
-<div class="stamp-box">Clearance: PUBLIC</div>
-
-
+<div class="stamp-box">Status: <span class="redacted">ARCHIVED</span></div>
+<div class="stamp-box">Clearance: <span class="redacted">AUTHORIZED PERSONNEL ONLY</span></div>
 
 ---
 
-## What Are CLI, Terminal, & Shell?
+## Apa itu CLI, Terminal, & Shell?
 
 Pernah dengar istilah CLI, terminal, atau shell?
-Bagi banyak orang, istilah-istilah ini terdengar asing.
+Bagi banyak orang, istilah-istilah ini mungkin terdengar asing.
 Padahal, istilah-istilah tersebut sangatlah penting di dunia komputer, terutama bagi programmer.
 
-Kebanyakan dari kita terbiasa dengan **GUI** (Graphical User Interface) yakni suatu antarmuka yang memiliki banyak *icon*, tombol, dan gambar yang bisa diklik atau di-drag.
-Misal, saat kamu ingin membuka file, kamu tinggal klik dua kali.
+Kebanyakan dari kita terbiasa dengan **GUI** (Graphical User Interface) yakni suatu antarmuka yang memiliki banyak *icon*, tombol, dan gambar yang bisa diklik atau di-*drag*.
+Misal, saat kamu ingin membuka *file*, kamu tinggal klik dua kali.
 Tapi, sebenarnya ada cara lain yaitu **CLI** (Command Line Interface).
 
 CLI adalah antarmuka berbasis teks, di mana kamu mengetik perintah langsung ke komputer.
@@ -24,7 +22,7 @@ Untuk mengakses CLI, kamu butuh aplikasi bernama **terminal**.
 
 ---
 
-## Terminal & Shell: What's The Difference?
+## Terminal & Shell: Apa Bedanya?
 
 Dulu, terminal adalah perangkat fisik, sepasang layar dan keyboard yang terhubung ke komputer utama (*mainframe*).
 Sekarang, terminal tetap ada sebagai aplikasi di komputer modern yang disebut **terminal emulator** (atau bisa juga tetap disebut terminal).
@@ -39,13 +37,13 @@ Jadi, saat kamu membuka terminal dan mengeksekusi perintah, shell-lah yang melak
 
 ---
 
-## Why Use CLI?
+## Kenapa Menggunakan CLI?
 
 Mungkin kamu bertanya, "Bukankah GUI lebih mudah?"
-Benar, GUI memang ramah pengguna. Tapi CLI juga punya keunggulan:
+Benar, GUI memang lebih mudah digunakan. Tapi CLI juga punya keunggulan:
 
-- **Fleksibilitas**. CLI memungkinkan operasi kompleks yang sulit (atau mustahil) dilakukan di GUI. Misal, mengganti nama 100 file sekaligus dengan pola tertentu.
-- **Otomasi**. Kamu bisa menulis skrip untuk menjalankan serangkaian perintah secara otomatis.
+- **Fleksibilitas**. CLI memungkinkan operasi kompleks yang sulit dilakukan di GUI. Misal, mengganti nama 100 file sekaligus dengan pola tertentu.
+- **Otomasi**. Kamu bisa menulis *script* untuk menjalankan serangkaian perintah secara otomatis.
 - **Kecepatan**. Setelah terbiasa, banyak tugas bisa diselesaikan lebih cepat lewat CLI.
 - **Remote Access**. Banyak server hanya bisa diakses lewat CLI, bukan GUI.
 - **Tools Khusus**. Banyak alat pemrograman dan administrasi hanya tersedia di CLI.
@@ -54,7 +52,7 @@ Tidak semua orang butuh CLI, tapi dengan memahaminya, kamu akan lebih powerful d
 
 ---
 
-## Your (Maybe) First CLI Experience
+## Ayo Gunakan CLI!
 
 Saatnya mencoba langsung!
 Mari buka terminal emulator di komputer masing-masing.
@@ -74,7 +72,7 @@ Mari buka terminal emulator di komputer masing-masing.
 
 ---
 
-## Run Your (Maybe) First Command
+## Jalankan Perintah Pertamamu!
 
 Sudah buka terminal?
 Coba ketik perintah berikut, lalu tekan ++enter++:
@@ -86,9 +84,11 @@ whoami
 Terminal akan menampilkan username-mu.
 Selamat! Kamu baru saja menjalankan perintah shell pertamamu.
 
+!!! question
+    Kamu mungkin ingin mencoba untuk melakukan copy/paste perintah di terminal. Namun, kamu mungkin sadar bahwa kombinasi ++ctrl+c++ dan ++ctrl+v++ tidak bisa digunakan. Terminal memiliki fungsi ++ctrl++ yang berbeda. Untuk dapat melakukan copy/paste, gunakan kombinasi ++ctrl+shift+c++ dan ++ctrl+shift+v++. Lihat [appendix](99_additional.md/#ctrl-button-behaviour) untuk mengetahui kegunaan ++ctrl++ pada terminal.
 ---
 
-### What is Prompt?
+### Apa itu prompt?
 
 Sebelum mengetik perintah, kamu pasti melihat baris seperti ini:
 
@@ -102,7 +102,7 @@ Itulah adalah **prompt**, tanda bahwa shell siap menerima perintah.
 - `@` : Pemisah user dan nama komputer
 - `computer` : Nama komputermu
 - `:` : Pemisah nama komputer dan path
-- `~` : Direktori saat ini (home directory)
+- `~` : Direktori saat ini (simbol '~' berarti home directory)
 - `$` : Simbol prompt (siap menerima perintah)
 
 !!! note
@@ -110,7 +110,7 @@ Itulah adalah **prompt**, tanda bahwa shell siap menerima perintah.
 
 ---
 
-### Trying Other Command
+### Coba Perintah Lain
 
 Sekarang, coba perintah berikut:
 
@@ -125,9 +125,12 @@ Halo
 
 Perintah `echo` digunakan untuk menampilkan teks ke layar.
 
+!!! info
+    Modul ini ditulis dengan menggunakan terminal di sistem UNIX (Linux/Mac). Akan ada perbedaan perintah pada terminal di sistem operasi Windows (PowerShell memiliki beberapa kemiripan dengan terminal Unix). Perintah pada terminal Windows dapat dilihat di [appendix](99_additional.md/#command-equivalence)
+
 ---
 
-## What is Path?
+## Apa itu Path?
 
 Kamu mungkin melihat simbol `~` di prompt.
 Itu adalah **path**, alamat lokasi kamu di dalam komputer.
@@ -136,7 +139,7 @@ Itu adalah **path**, alamat lokasi kamu di dalam komputer.
 - Di GUI, kamu berpindah folder dengan klik.
   Di CLI, kamu berpindah dengan mengetik perintah dan path.
 
-Saat pertama kali membuka terminal, kamu biasanya berada di **home directory** (dilambangkan dengan `~`).
+Saat pertama kali membuka terminal, kamu biasanya berada di **home directory** (dilambangkan dengan `~` di Linux/Mac).
 
 ---
 
@@ -176,4 +179,4 @@ Ada dua jenis path:
 Sekarang kamu sudah mengenal dasar CLI, terminal, shell, dan path.
 Selanjutnya, kita akan belajar **navigasi** di terminal, bagaimana berpindah direktori, melihat isi folder, dan lain-lain.
 
-[Lanjut ke: Navigation](02_navigation.md){ .md-button .md-button--primary }
+[Lanjut ke Navigation](02_navigation.md){ .md-button .md-button--primary }

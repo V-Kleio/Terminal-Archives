@@ -121,6 +121,11 @@ extra:
 nav:
   - Home: index.md
 
-  - Shell:
-    - Intro to Shell: module1/01_intro.md
-    - Navigating Shell: module1/02_navigation.md
+  - Terminal:
+    - Intro to Terminal: module1/01_intro.md
+    - Navigation: module1/02_navigation.md
+    - Manipulating Files: module1/03_file_manipulation.md
+    - Reading Files: module1/04_reading_files.md
+    - Wildcards: module1/05_text_power.md
+    - IO Redirection: module1/06_io_redirection.md
+    - Appendix: module1/99_additional.md
