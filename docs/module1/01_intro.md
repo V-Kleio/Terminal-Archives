@@ -15,7 +15,7 @@ Kebanyakan dari kita terbiasa dengan **GUI** (Graphical User Interface) yakni su
 Misal, saat kamu ingin membuka *file*, kamu tinggal klik dua kali.
 Tapi, sebenarnya ada cara lain yaitu **CLI** (Command Line Interface).
 
-CLI adalah antarmuka berbasis teks, di mana kamu mengetik perintah langsung ke komputer.
+CLI adalah antarmuka berbasis teks, kamu mengetik perintah langsung ke komputer.
 Contohnya, kamu bisa menulis perintah untuk memindahkan file, mengganti nama ratusan file sekaligus, atau menjalankan program tertentu, semuanya melalui kode perintah.
 
 Untuk mengakses CLI, kamu butuh aplikasi bernama **terminal**.
@@ -31,9 +31,7 @@ Namun, terminal hanyalah tempat kamu mengetik perintah.
 Agar perintahmu dijalankan, dibutuhkan program bernama **shell**.
 
 - **Terminal**: Tempat kamu mengetik perintah (interface).
-- **Shell**: Program yang membaca dan menjalankan perintahmu.
-
-Jadi, saat kamu membuka terminal dan mengeksekusi perintah, shell-lah yang melakukan perintah tersebut.
+- **Shell**: Program yang membaca dan menerjemahkan kode perintah lalu menyuruh komputer untuk menjalankan perintahmu.
 
 ---
 
@@ -55,7 +53,7 @@ Tidak semua orang butuh CLI, tapi dengan memahaminya, kamu akan lebih powerful d
 ## Ayo Gunakan CLI!
 
 Saatnya mencoba langsung!
-Mari buka terminal emulator di komputer masing-masing.
+Mari buka terminal emulator di komputer.
 
 === "Windows"
     1. Tekan ++win+r++ untuk membuka Run.
@@ -149,7 +147,7 @@ Ada dua jenis path:
 
 - **Absolute Path**: Alamat lengkap dari root.
     - Windows: `C:\Users\username\some_directory`
-    - Linux: `/home/username/some_directory` (atau `~` untuk home)
+    - Linux: `/home/username/some_directory`
     - Mac: `/Users/username/some_directory`
 - **Relative Path**: Alamat relatif terhadap direktori saat ini.
     - `.` : Direktori saat ini

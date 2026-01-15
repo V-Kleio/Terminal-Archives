@@ -54,7 +54,7 @@ say
 
 ## Function dengan Arguments
 
-Fungsi bisa menerima argumen seperti *script* biasa.
+Fungsi bisa menerima argumen seperti script biasa.
 Argumen diakses dengan `$1`, `$2`, dan seterusnya.
 
 ```bash
@@ -96,7 +96,7 @@ echo "3 x 4 = $hasil"
 
 ## Next Step
 
-Sekarang kamu sudah mengetahui cara membuat function di dalam *script*.
+Sekarang kamu sudah mengetahui cara membuat function di dalam script.
 Selanjutnya kita akan mempelajari exit code.
 
 [Lanjut ke Exit Code](07_exit_code.md){ .md-button .md-button--primary }

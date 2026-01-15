@@ -34,6 +34,7 @@ less nama_file.txt
 ```
 
 Navigasi di `less`:
+
 - Gunakan tombol panah atas/bawah untuk *scroll*.
 - Tekan `q` untuk keluar dari `less`.
 

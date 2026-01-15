@@ -7,8 +7,8 @@
 
 ## User Input
 
-*Script* yang interaktif membutuhkan input dari pengguna.
-Dengan mengambil input, *script* bisa menyesuaikan terhadap kebutuhan user.
+Script yang interaktif membutuhkan input dari pengguna.
+Dengan mengambil input, script bisa menyesuaikan terhadap kebutuhan pengguna.
 
 ---
 
@@ -47,10 +47,10 @@ read -s password
 
 ## Script Argument: `$1`, `$2`, ...
 
-Selain input interaktif, *script* juga bisa menerima argumen saat dijalankan.
-Argumen ini ditulis setelah nama *script* di terminal.
+Selain input interaktif, script juga bisa menerima argumen saat dijalankan.
+Argumen ini ditulis setelah nama script di terminal.
 
-Contoh *script* `halo.sh`:
+Contoh script `halo.sh`:
 
 ```bash
 #!/bin/bash
@@ -101,7 +101,7 @@ echo "Semua argumen: $@"
 |-------------|---------------------------------------------|
 | read var    | Membaca input dari user                     |
 | read -s var | Membaca input tanpa menampilkan ke layar    |
-| $1, $2, ... | Mengakses argumen saat menjalankan *script* |
+| $1, $2, ... | Mengakses argumen saat menjalankan script |
 | $#          | Jumlah argumen                              |
 | $@          | Semua argumen                               |
 
@@ -110,6 +110,6 @@ echo "Semua argumen: $@"
 ## Next Step
 
 Sekarang kamu sudah tahu cara membaca input user.
-Selanjutnya kita akan melihat salah satu konsep pemrograman, yaitu `if statement`, dalam *scripting*.
+Selanjutnya kita akan melihat salah satu konsep pemrograman, yaitu `if statement`, dalam scripting.
 
 [Lanjut ke Flow Control](04_flow_control.md){ .md-button .md-button--primary }

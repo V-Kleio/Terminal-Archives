@@ -19,7 +19,7 @@ Di Bash, ini bisa dilakukan dengan **loops**.
 !!! tip "Windows Users"
     Looping di Windows (terutama Batch) cukup berbeda dan bisa sedikit *tricky*. PowerShell memiliki opsi looping yang lebih modern. Lihat [Looping di Windows](99_additional.md#windows-scripting-batch-powershell).
 
-Contoh sederhana:
+Contoh:
 
 ```bash
 for nama in Alice Bob Charlie
@@ -47,7 +47,7 @@ done
 
 `while` loop digunakan untuk mengulang perintah selama suatu kondisi bernilai benar (true).
 
-Contoh sederhana:
+Contoh:
 
 ```bash
 angka=1
@@ -82,7 +82,7 @@ done < nama_file.txt
 - `break` : Keluar dari loop lebih awal.
 - `continue` : Lompat ke iterasi berikutnya tanpa menjalankan sisa perintah di dalam loop.
 
-Contoh penggunaan:
+Contoh:
 
 ```bash
 for angka in 1 2 3 4 5
@@ -110,7 +110,7 @@ Perintah di atas akan melewati angka 3.
 
 ## Next Step
 
-Sekarang kamu sudah mengetahui cara menggunakan loop di dalam *script*.
+Sekarang kamu sudah mengetahui cara menggunakan loop di dalam script.
 Selanjutnya kita akan belajar tentang function.
 
 [Lanjut ke Function](06_function.md){ .md-button .md-button--primary }

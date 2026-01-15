@@ -7,7 +7,7 @@
 
 ## Exit Codes
 
-Setiap perintah atau *script* di terminal akan menghasilkan **exit code** setelah dijalankan.
+Setiap perintah atau script di terminal akan menghasilkan **exit code** setelah dijalankan.
 Exit code adalah angka yang menunjukkan apakah perintah berhasil atau gagal.
 
 ---
@@ -38,9 +38,9 @@ echo $?   # Biasanya 1 jika file tidak ada
 
 ---
 
-## Exit Code in Script
+## Exit Code di Script
 
-Kamu bisa menentukan exit code sendiri di dalam *script* dengan perintah `exit`:
+Kamu bisa menentukan exit code sendiri di dalam script dengan perintah `exit`:
 
 ```bash
 if [ -z "$1" ]; then
@@ -80,11 +80,11 @@ cp file1.txt backup/ && echo "Berhasil" || echo "Gagal"
 ```
 
 Sesuatu yang aneh mungkin saja terjadi jika perintah kedua (`echo "Berhasil"`) gagal (hampir tidak pernah terjadi), maka perintah setelah `||` juga akan dijalankan.
-Situasi ini menyebabkan *weird behaviour*, perintah `cp` berhasil namun terminal melakukan `echo` "Gagal".
+Situasi ini menyebabkan *weird behaviour*, perintah `cp` berhasil namun terminal melakukan `echo "Gagal"`.
 
 ---
 
-## Exit Code in Function
+## Exit Code di Function
 
 Fungsi di Bash juga mengembalikan exit code dari perintah terakhir yang dijalankan di dalam fungsi.
 Kamu bisa menggunakan `return` untuk mengatur exit code fungsi:
@@ -108,7 +108,7 @@ cek_file data.txt && echo "File ada" || echo "File tidak ada"
 | Konsep      | Fungsi                                      |
 |-------------|---------------------------------------------|
 | $?          | Melihat exit code perintah terakhir         |
-| exit N      | Mengatur exit code di *script*              |
+| exit N      | Mengatur exit code di script              |
 | &&          | Jalankan perintah berikutnya jika sukses    |
 | \|\|        | Jalankan perintah berikutnya jika gagal     |
 
@@ -117,7 +117,7 @@ cek_file data.txt && echo "File ada" || echo "File tidak ada"
 ## Next Step
 
 Selamat, kamu sudah memahami dasar dari scripting.
-Kamu sekarang sudah bisa membuat *script* untuk membuat perintah terminal yang lebih kompleks atau secara otomatis menjalankan perintah terminal.
+Kamu sekarang sudah bisa membuat script untuk membuat perintah terminal yang lebih kompleks atau secara otomatis menjalankan perintah terminal.
 
 Sekarang, saatnya kita belajar tentang Git, sebuah program untuk mengelola perubahan file.
 

@@ -8,7 +8,7 @@
 ## Variabel dalam Bash Scripting
 
 Variabel adalah salah satu konsep paling dasar dalam scripting.
-Dengan variabel, kamu bisa menyimpan data sementara, seperti teks, angka, atau hasil dari perintah lain, lalu menggunakannya kembali di dalam *script*.
+Dengan variabel, kamu bisa menyimpan data sementara, seperti teks, angka, atau hasil dari perintah lain, lalu menggunakannya kembali di dalam script.
 
 ---
 
@@ -137,7 +137,7 @@ Agar variabel yang kamu buat bisa diakses oleh proses lain, gunakan perintah `ex
 export PROJECT="Terminal Archives"
 ```
 
-Sekarang variabel `PROJECT` bisa diakses oleh *script* atau program lain yang dijalankan dari shell tersebut.
+Sekarang variabel `PROJECT` bisa diakses oleh script atau program lain yang dijalankan dari shell tersebut.
 
 ---
 
@@ -164,7 +164,7 @@ unset nama
 
 ## Next Step
 
-Sekarang kamu sudah bisa membuat variabel di dalam *script*.
-Selanjutnya kita akan belajar tentang user input agar *script* kita lebih interaktif.
+Sekarang kamu sudah bisa membuat variabel di dalam script.
+Selanjutnya kita akan belajar tentang user input agar script kita lebih interaktif.
 
 [Lanjut ke User Input](03_user_input.md){ .md-button .md-button--primary }

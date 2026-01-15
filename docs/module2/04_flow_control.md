@@ -7,8 +7,8 @@
 
 ## Flow Control
 
-Agar *script* bisa mengambil keputusan, kamu perlu memahami konsep **flow control**.
-Dengan flow control, *script* bisa menjalankan perintah yang berbeda tergantung kondisi tertentu.
+Agar script bisa mengambil keputusan, kamu perlu memahami konsep **flow control**.
+Dengan flow control, script bisa menjalankan perintah yang berbeda tergantung kondisi tertentu.
 
 ---
 
@@ -152,7 +152,7 @@ fi
 
 ## Next Step
 
-Sekarang kamu sudah tahu cara menggunakan `if statement` di dalam *script*.
+Sekarang kamu sudah tahu cara menggunakan `if statement` di dalam script.
 Selanjutnya kita akan mempelajari temannya yaitu `loops`.
 
 [Lanjut ke Loops](05_loops.md){ .md-button .md-button--primary }

@@ -7,7 +7,7 @@
 
 ## Command Equivalence
 
-Perintah-perintah yang ditulis dalam module terminal merupakan perintah untuk terminal di sistem Unix (Linux/Mac). Perintah di Windows memiliki perbedaan. Berikut merupakan perbandingan perintah di Unix, Command Prompt (Windows), dan PowerShell (Windows).
+Perintah-perintah yang ditulis dalam module ini merupakan perintah untuk terminal di sistem Unix (Linux/Mac). Perintah di Windows memiliki perbedaan. Berikut merupakan perbandingan perintah di Unix, Command Prompt (Windows), dan PowerShell (Windows).
 
 ### Identitas & Output (`whoami`, `echo`)
 
@@ -176,8 +176,8 @@ Ada beberapa fitur bawaan shell yang bisa membuatmu mengetik jauh lebih cepat.
 - Jika ada lebih dari satu pilihan, tekan **++tab++** dua kali untuk melihat semua daftar kemungkinan yang diawali huruf tersebut.
 
 ### 2. Navigasi History (Panah Atas/Bawah)
-- Gunakan tombol **++up-arrow++** untuk memanggil kembali perintah-perintah sebelumnya.
-- Gunakan tombol **++down-arrow++** untuk kembali ke perintah yang lebih baru jika kamu sudah mencarinya terlalu jauh ke atas.
+- Gunakan tombol **++up++** untuk memanggil kembali perintah-perintah sebelumnya.
+- Gunakan tombol **++down++** untuk kembali ke perintah yang lebih baru jika kamu sudah mencarinya terlalu jauh ke atas.
 
 ### 3. Perintah `history`
 - Ketik perintah `history`. Terminal akan menampilkan daftar panjang berisi history perintahmu beserta nomor urutnya.

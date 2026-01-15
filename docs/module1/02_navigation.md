@@ -58,6 +58,7 @@ Ada dua jenis path: **absolute path** dan **relative path**.
     - Contoh: `Documents/resume.pdf` (jika kamu sedang berada di `/home/user`)
 
 Simbol penting:
+
 - `.` : direktori saat ini
 - `..` : direktori parent
 - `~` : home directory (khusus Unix/Linux/Mac)
@@ -112,9 +113,9 @@ Tambahan ini disebut **flag** (atau kadang disebut "option" atau "switch"). Flag
 
 ### Cara Kerja Flag
 
-- Flag biasanya diawali dengan satu atau dua tanda minus:
-    - Satu minus (`-`) diikuti satu huruf, misal: `-l`
-    - Dua minus (`--`) diikuti kata lengkap, misal: `--help`
+- Flag biasanya diawali dengan satu atau dua tanda *dash*:
+    - Satu dash (`-`) diikuti satu huruf, misal: `-l`
+    - Dua dash (`--`) diikuti kata lengkap, misal: `--help`
 - Flag bisa digabung, misal: `ls -la` sama dengan `ls -l -a`
 
 Contoh penggunaan flag pada perintah `ls`:
@@ -136,9 +137,9 @@ Menggabungkan dua flag: menampilkan semua file dengan detail.
 
 ### Dua Bentuk Flag
 
-Flag bisa ditulis dalam bentuk pendeknya (contoh, ls -h) atau bentuk lengkapnya (contoh, ls --help).
+Flag bisa ditulis dalam bentuk pendeknya (contoh, `ls -h`) atau bentuk lengkapnya (contoh, `ls --help`).
 Lalu, mengapa kita tidak menggunakan bentuk pendeknya saja jika lebih mudah dan cepat untuk diketik?
-Biasanya, bentuk lengkap suatu file digunakan dalam **scripting** agar *script* tersebut lebih mudah dibaca.
+Biasanya, bentuk lengkap suatu file digunakan dalam **scripting** agar script tersebut lebih mudah dibaca.
 Oleh sebab itu, perintah CLI masih menyediakan opsi flag dalam bentuk lengkapnya.
 
 ### Flag Umum

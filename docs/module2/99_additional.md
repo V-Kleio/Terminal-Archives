@@ -25,10 +25,10 @@ Komputer tidak paham bahasa manusia (seperti perintah `echo "Halo"`). Diperlukan
 
 ## Windows Scripting (Batch & PowerShell)
 
-Materi di modul 2 ini berfokus pada Bash (Unix/Linux/Mac). Jika kamu pengguna Windows, kamu memiliki dua pilihan utama untuk scripting: **Batch** (klasik) dan **PowerShell** (modern).
+Materi di modul ini berfokus pada Bash (Unix/Linux/Mac). Jika kamu pengguna Windows, kamu memiliki dua pilihan utama untuk scripting: **Batch** (klasik) dan **PowerShell** (modern).
 
 ### 1. Batch Script (`.bat`)
-Format "jadul" peninggalan MS-DOS. Masih banyak dipakai untuk tugas sederhana karena ringan dan ada di semua komputer Windows.
+Format lama peninggalan MS-DOS. Masih banyak dipakai untuk tugas sederhana karena ringan dan ada di semua komputer Windows.
 
 - **Ekstensi**: `.bat` atau `.cmd`.
 - **Komentar**: Menggunakan `REM` atau `::`.
@@ -221,14 +221,14 @@ Write-Output "$sapaan $nama"
 exit 0
 ```
 
-### Tabel Perbandingan Cepat
+### Tabel Perbandingan
 
-| Fitur | Bash (Modul ini) | PowerShell (Rekomendasi Windows) | CMD / Batch (Legacy) |
+| Fitur | Bash | PowerShell | CMD / Batch (Legacy) |
 |---|---|---|---|
 | **Ekstensi** | `.sh` (opsional) | `.ps1` (wajib) | `.bat` (wajib) |
 | **Shebang** | `#!/bin/bash` | Tidak Butuh | Tidak Butuh |
 | **Variabel** | `nama="Kleio"` | `$nama = "Kleio"` | `set nama=Kleio` |
-| **Cetak Var** | `echo $nama` | `Write-Output $nama` | `echo %nama%` |
+| **Print Var** | `echo $nama` | `Write-Output $nama` | `echo %nama%` |
 | **Input** | `read nama` | `$nama = Read-Host` | `set /p nama=` |
 | **Kondisi** | `if [ $a -eq 1 ]` | `if ($a -eq 1)` | `if %a%==1` |
 
@@ -236,20 +236,21 @@ exit 0
 
 ## Process Management
 
-Terkadang *script* yang kamu jalankan memakan waktu lama, atau kamu ingin menghentikan *script* yang "macet".
+Terkadang script yang kamu jalankan memakan waktu lama dan kamu ingin menghentikan proses script.
 
 ### Melihat Proses (`ps`, `top`)
 - `ps` : Menampilkan snapshot proses saat ini.
 - `top` (atau `htop`) : Menampilkan aktivitas proses secara real-time.
 
 ### Menjalankan di Background (`&`)
-Agar terminal tidak "terkunci" saat menjalankan script lama, tambahkan `&` di akhir perintah:
+Agar terminal tidak "terkunci" saat menjalankan script yang lama, tambahkan `&` di akhir perintah:
 ```bash
 ./long_script.sh &
 ```
 
 ### Menghentikan Proses (`kill`)
 Jika ada script yang error dan tidak bisa berhenti:
+
 1. Cari PID (Process ID) dengan `ps` atau `top`.
 2. Hentikan paksa dengan:
    ```bash
