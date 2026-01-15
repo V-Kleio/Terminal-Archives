@@ -52,6 +52,47 @@ Perbedaan utama antara menyimpan file biasa dan menggunakan Git adalah konsep **
 
 ---
 
+## Instalasi Git
+
+Sebelum mulai, kamu harus menginstall Git di komputer lokalmu.
+
+### Windows (Wajib Baca!)
+Pengguna Windows **SANGAT DISARANKAN** untuk menginstall **Git Bash**.
+Modul-modul sebelumnya (Terminal & Scripting) menggunakan sintaks Bash (Linux). Dengan Git Bash, kamu mendapatkan terminal yang mendukung perintah-perintah Linux tersebut di Windows.
+
+1.  Download **Git for Windows** di [git-scm.com](https://git-scm.com/download/win).
+2.  Jalankan installer.
+3.  Saat instalasi, pastikan opsi **Git Bash Here** terpilih.
+4.  Setelah selesai, buka aplikasi **Git Bash** untuk menggunakan terminal bash.
+    Ini akan mengatasi isu kompatibilitas perintah terminal di Windows.
+
+### Linux (Debian/Ubuntu)
+Buka terminal dan jalankan:
+```bash
+sudo apt update
+sudo apt install git
+```
+
+### macOS
+Jika kamu sudah menginstall Xcode atau Homebrew:
+```bash
+brew install git
+```
+
+Cek versi untuk memastikan instalasi berhasil:
+```bash
+git --version
+```
+
+---
+
 ## Next Step
+
+Git sangatlah berguna karena kita bisa membuat banyak versi dari proyek kita dengan snapshot.
+Kita juga bisa berpindah versi perubahan dengan mudah.
+Hal inilah yang mungkin terkesan seperti *time-travel* karena kita bisa saja kembali ke keadaan snapshot folder sebelumnya.
+Git juga menyimpan seluruh file dalam repositori git (tidak hanya satu file)
+
+Selanjutnya ayo kita coba gunakan Git!
 
 [Lanjut ke Konfigurasi Git](02_configuration.md){ .md-button .md-button--primary }

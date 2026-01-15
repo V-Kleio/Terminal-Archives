@@ -16,7 +16,7 @@ Di bagian ini, kita akan membahas siklus hidup file dalam Git, bagaimana cara me
 Git membagi status file kamu ke dalam tiga area utama. Memahami ini adalah kunci agar tidak bingung saat file "hilang" atau belum tersimpan.
 
 1.  **Working Directory**: Tempat kamu bekerja (ngoding, edit, hapus file). Perubahan di sini belum disimpan Git secara permanen.
-2.  **Staging Area (Index)**: Kamu memilih file mana saja yang *akan* di-commit (snapshot) oleh Git.
+2.  **Staging Area (Index)**: Kamu memilih file mana saja yang **akan** di-commit (snapshot) oleh Git.
 3.  **Repository (.git)**: Tempat snapshot (commit) disimpan selamanya.
 
 **Workflow Normal:**
@@ -34,6 +34,9 @@ Langkah pertama membuat repositori baru agar bisa dilacak oleh Git:
 git init
 ```
 Ini akan membuat hidden folder `.git` yang bertugas sebagai *database* semua perubahanmu.
+
+!!! note
+    Kamu mungkin membaca istilah *repository* sebelumnya pada modul ini, apa itu? Pada konteks ini, repository adalah nama lain untuk folder (direktori) yang sedang dilacak oleh git. Ketika kamu menggunakan `git init`, kamu mengubah direktori kamu saat ini menjadi git repository.
 
 ## 2. Status File: `git status`
 
@@ -54,7 +57,7 @@ git add .               # Menambahkan SEMUA perubahan di folder ini
 ```
 
 !!! tip "Ignored Files"
-    Kadang ada file yang tidak ingin kamu add, seperti file sampah atau rahasia. Kamu bisa mengaturnya menggunakan file khusus bernama `.gitignore`. Lihat caranya di [Gitignore](99_additional.md#2-mengabaikan-file-dengan-gitignore).
+    Kadang ada file yang tidak ingin kamu add, seperti file sampah atau rahasia. Kamu bisa mengaturnya menggunakan file khusus bernama `.gitignore`. Lihat caranya di [Gitignore](99_additional.md#mengabaikan-file-dengan-gitignore).
 
 ## 4. Menyimpan Snapshot: `git commit`
 
@@ -73,6 +76,7 @@ Melihat daftar riwayat snapshot yang pernah kamu buat.
 git log
 ```
 Kamu akan melihat hash (ID unik), author, tanggal, dan pesan commit.
+
 - `git log --oneline`: Versi ringkas, satu baris per commit.
 - `q`: Tombol untuk keluar dari tampilan log.
 
@@ -101,7 +105,7 @@ Kadang kamu lupa, "Tadi saya ubah baris yang mana ya?".
 
 ## Next Step
 
-Sekarang kamu sudah menguasai siklus dasar Git: ubah, add, commit, dan pantau.
-Selanjutnya, kita akan belajar salah satu "fitur pembunuh" dari Git yang memungkinkan kita bereksperimen tanpa takut merusak kode utama.
+Sekarang kamu sudah menguasai siklus dasar Git: ubah, add, commit.
+Selanjutnya, kita akan belajar salah satu fitur penting dari Git yang memungkinkan kita bereksperimen tanpa takut merusak kode utama.
 
 [Lanjut ke Branching & Merging](04_branching.md){ .md-button .md-button--primary }

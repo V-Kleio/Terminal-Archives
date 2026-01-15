@@ -31,7 +31,7 @@ Gantilah `"Namamu"` dengan nama asli atau nama yang ingin kamu tampilkan di riwa
 git config --global user.email "email@example.com"
 ```
 
-Gantilah `"email@example.com"` dengan email yang kamu gunakan untuk GitHub atau layanan Git lainnya.
+Gantilah `"email@example.com"` dengan email yang kamu gunakan untuk GitHub atau layanan Git remote lainnya.
 
 ---
 
@@ -77,4 +77,6 @@ git config user.email
 
 ## Next Step
 
-[Lanjut ke Git Basic: Workflow](03_git_basics.md){ .md-button .md-button--primary }
+Jika kamu sudah meng-install dan melakukan konfigurasi Git, selanjutnya kita akan belajar tentang dasar-dasar git.
+
+[Lanjut ke Git Basic](03_git_basics.md){ .md-button .md-button--primary }

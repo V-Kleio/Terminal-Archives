@@ -31,10 +31,10 @@ git restore --staged nama_file.txt
 
 ---
 
-## Koreksi Ringan: `git commit --amend`
+## Kesalahan Kecil: `git commit --amend`
 
 Pernahkah kamu baru saja melakukan commit, lalu sadar ada typo di pesannya? Atau ada file yang lupa di-`add`?
-Daripada melakukan reset, kamu bisa "menambal" commit terakhir tersebut.
+Daripada melakukan reset, kamu bisa memperbaiki commit terakhir tersebut.
 
 1. **Ganti pesan commit**:
     ```bash
@@ -47,7 +47,8 @@ Daripada melakukan reset, kamu bisa "menambal" commit terakhir tersebut.
     git commit --amend --no-edit
     ```
 
-*Catatan: `--no-edit` artinya menggunakan pesan commit yang lama.*
+!!! note
+    `--no-edit` artinya menggunakan pesan commit yang lama.
 
 ---
 
@@ -80,27 +81,29 @@ git reset --hard HEAD~1
 ```
 
 - Membatalkan commit terakhir dan menghapus semua perubahan di working directory.
-- **Hati-hati:** Perubahan yang belum di-commit akan hilang permanen.
+
+!!! danger
+    Hati-hati, perubahan yang belum di-commit akan hilang permanen.
 
 ---
 
 ## Membatalkan Commit Tanpa Mengubah Riwayat: `git revert`
 
-Jika commit sudah terlanjur didorong ke remote atau kamu ingin membatalkan commit tanpa menghapus riwayat, gunakan:
+Jika commit sudah terlanjur di-push ke remote atau kamu ingin membatalkan commit tanpa menghapus riwayat, gunakan:
 
 ```bash
 git revert <hash_commit>
 ```
 
-- Git akan membuat commit baru yang membalikkan perubahan dari commit yang dipilih.
+- Git akan membuat commit baru yang mengembalikkan perubahan dari commit yang dipilih.
 - Aman digunakan di repository bersama (collaborative).
 
 ---
 
-## Alias: Jalan Pintas
+## Alias
 
-Jika perintah-perintah di atas terasa terlalu panjang untuk diketik berulang-ulang, kamu bisa membuat jalan pintas atau **Alias**.
-Lihat caranya di [Appendix: Alias Git](99_additional.md#3-alias-untuk-efisiensi).
+Jika perintah-perintah di atas terasa terlalu panjang untuk diketik berulang-ulang, kamu bisa membuat shortcut atau **Alias**.
+Lihat caranya di [Appendix: Alias Git](99_additional.md#alias-untuk-efisiensi).
 
 ---
 
@@ -119,8 +122,8 @@ Lihat caranya di [Appendix: Alias Git](99_additional.md#3-alias-untuk-efisiensi)
 
 ## Next Step
 
-Sekarang kamu sudah memiliki bekal lengkap untuk mengelola repository lokalmu, mulai dari inisialisasi, branching, hingga memperbaiki kesalahan.
-Langkah selanjutnya adalah membawa kodemu ke dunia luar agar bisa berkolaborasi dengan orang lain.
+Sekarang kamu sudah jago dalam mengelola repository lokalmu, mulai dari inisialisasi, branching, hingga memperbaiki kesalahan.
+Langkah selanjutnya adalah membawa kodemu ke cloud agar bisa berkolaborasi dengan orang lain.
 
-[Lanjut ke Modul 4: GitHub](../module4/01_github.md){ .md-button .md-button--primary }
-[Appendix: Tips Tambahan](99_additional.md){ .md-button .md-button--primary }
+[Lanjut ke GitHub](../module4/01_github.md){ .md-button .md-button--primary }
+[Appendix](99_additional.md){ .md-button .md-button--primary }

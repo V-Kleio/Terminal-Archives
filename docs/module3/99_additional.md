@@ -5,13 +5,7 @@
 
 ---
 
-## Git Tips & Tricks
-
-Di sini adalah kumpulan perintah dan fitur Git yang mungkin jarang digunakan di awal, tapi sangat penyelamat saat kamu mulai mengerjakan proyek yang lebih besar.
-
----
-
-## 1. Menyimpan Sementara dengan `git stash`
+## Menyimpan Sementara dengan `git stash`
 
 Bayangkan kamu sedang asyik ngoding di branch `feature-a`, tiba-tiba ada bug urgent di `main` yang harus segera diperbaiki. Tapi, kodemu di `feature-a` belum selesai dan belum siap di-commit.
 Jangan panik, gunakan `git stash`.
@@ -33,11 +27,11 @@ Fitur ini akan "menyembunyikan" perubahanmu sementara waktu agar working directo
 
 ---
 
-## 2. Mengabaikan File dengan `.gitignore`
+## Mengabaikan File dengan `.gitignore`
 
 Tidak semua file perlu dimasukkan ke Git. File seperti hasil build (`.exe`, `dist/`), folder dependensi (`node_modules/`), atau file konfigurasi rahasia (`.env`) sebaiknya diabaikan.
 
-Caranya mudah, buat file bernama `.gitignore` di root proyekmu, lalu tulis nama file/folder yang ingin diabaikan.
+Caranya mudah, buat file bernama `.gitignore` di root repository, lalu tulis nama file/folder yang ingin diabaikan.
 
 Contoh isi `.gitignore`:
 ```
@@ -56,7 +50,7 @@ node_modules/
 
 ---
 
-## 3. Alias untuk Efisiensi
+## Alias untuk Efisiensi
 
 Capek mengetik `git status` atau `git checkout` terus-menerus? Kamu bisa membuat singkatan (alias).
 
@@ -70,25 +64,21 @@ Sekarang kamu cukup mengetik `git s`, `git co`, atau `git br`.
 
 ---
 
-## 4. Memahami `HEAD` dan "Detached HEAD"
+## Memahami `HEAD` dan "Detached HEAD"
 
 Kamu mungkin sering melihat kata `HEAD` di terminal.
 **HEAD** adalah pointer (penunjuk) yang menandakan "posisi kamu sekarang". Biasanya, HEAD menunjuk ke **Branch** (misal `main`).
 
 Namun, jika kamu melakukan `checkout` langsung ke nomor commit (hash), misal `git checkout a1b2c3d`, kamu akan masuk ke mode **Detached HEAD**.
 
-Artinya:
-- Kamu sedang melihat masa lalu.
-- Kamu bisa melakukan eksperimen.
-- **PENTING**: Jika kamu membuat commit di sini, lalu pindah kembali ke `main`, commit tersebut akan **HILANG** (karena tidak terikat ke branch manapun).
+Artinya kamu sedang melihat keadaan commit masa lalu dan kamu bisa melakukan eksperimen di saat itu.
 
-**Solusi**:
-Jika ingin menyimpan perubahan di mode ini, buatlah branch baru: `git switch -c branch-eksperimen`.
+**PENTING**: Jika kamu membuat commit di sini, lalu pindah kembali ke `main`, commit tersebut akan **HILANG** (karena tidak terikat ke branch manapun). Jika ingin menyimpan perubahan di mode ini, buatlah branch baru: `git switch -c branch-eksperimen`.
 Jika hanya ingin melihat-lihat, cukup kembali ke masa kini dengan: `git switch main`.
 
 ---
 
-## 5. Memilih Commit Spesifik dengan `cherry-pick`
+## Memilih Commit Spesifik dengan `cherry-pick`
 
 Terkadang kamu tidak ingin menggabungkan (merge) seluruh branch, melainkan hanya ingin mengambil **satu commit tertentu** dari branch lain.
 
@@ -96,6 +86,7 @@ Contoh kasus:
 Kamu punya branch `fitur-a` dan `fitur-b`. Ada perbaikan bug penting di `fitur-a` (commit hash: `a1b2c3d`) yang juga dibutuhkan di `fitur-b`, tapi kamu belum mau merge semuanya.
 
 Caranya:
+
 1. Pindah ke branch tujuan (`fitur-b`).
 2. Jalankan perintah:
    ```bash
@@ -105,14 +96,15 @@ Git akan mengambil perubahan dari commit tersebut dan menempelkannya di branch k
 
 ---
 
-## 6. Merapikan History dengan `rebase`
+## Merapikan History dengan `rebase`
 
 Selain `merge`, ada cara lain untuk menggabungkan perubahan, yaitu `rebase`.
 Bedanya:
-- **Merge**: Membuat "cabang" sejarah (history) yang bertemu di satu titik (merge commit). Aman tapi bisa berantakan.
-- **Rebase**: Memindahkan ("menanam ulang") dasar branch kamu ke ujung branch lain.
 
-Hasilnya? History-mu akan terlihat lurus dan rapi seolah-olah semua dikerjakan berurutan tanpa cabang.
+- **Merge**: Membuat "cabang" history yang bertemu di satu titik (merge commit). Aman tapi bisa berantakan.
+- **Rebase**: Memindahkan titik dasar branch kamu ke ujung branch lain.
+
+Hasilnya? History-mu akan terlihat lurus dan rapi seolah-olah semua dikerjakan berurutan tanpa branching.
 
 ```bash
 # Pastikan kamu di branch fitur
@@ -125,4 +117,5 @@ git rebase main
 !!! danger "Peraturan Utama Rebase"
     **JANGAN PERNAH** melakukan rebase pada branch publik (branch yang dipakai bersama tim) yang sudah di-push ke remote. Rebase mengubah sejarah, dan ini bisa membuat teman timmu menderita konflik yang parah. Gunakan rebase hanya untuk merapikan branch lokalmu sendiri sebelum di-merge.
 
-[Kembali ke Modul Git](03_git_basics.md){ .md-button .md-button--primary }
+[Kembali ke Git](01_intro.md){ .md-button .md-button--primary }
+[Lanjut ke GitHub](../module4/01_github.md){ .md-button .md-button--primary }

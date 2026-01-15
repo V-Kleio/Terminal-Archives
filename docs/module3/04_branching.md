@@ -15,17 +15,17 @@ Branching membuat kolaborasi dan pengembangan proyek jadi lebih aman dan terstru
 
 ## Kenapa Perlu Branch?
 
-Tanpa branch, semua perubahan langsung terjadi di jalur utama (biasanya `main` atau `master`).
-Jika ada kesalahan atau eksperimen gagal, kode utama bisa rusak.
+Tanpa branch, semua perubahan langsung terjadi di branch utama (biasanya `main` atau `master`).
+Jika ada kesalahan, kode utama bisa rusak.
 Dengan branch, kamu bisa:
 
-- Mengembangkan fitur baru tanpa mengganggu kode stabil.
+- Mengembangkan fitur baru tanpa mengganggu kode utama.
 - Memperbaiki bug secara terpisah.
 - Menguji ide atau eksperimen.
 - Bekerja paralel dengan tim.
 
 !!! tip "Work in Progress?"
-    Jika kamu harus pindah branch tapi pekerjaanmu belum selesai (belum siap commit), jangan khawatir. Kamu bisa menggunakan fitur `git stash` untuk menyimpan pekerjaanmu sementara. Cek caranya di [Git Stash](99_additional.md#1-menyimpan-sementara-dengan-git-stash).
+    Jika kamu harus pindah branch tapi pekerjaanmu belum selesai (belum siap commit), jangan khawatir. Kamu bisa menggunakan fitur `git stash` untuk menyimpan pekerjaanmu sementara. Cek caranya di [Git Stash](99_additional.md#menyimpan-sementara-dengan-git-stash).
 
 ---
 
@@ -57,7 +57,7 @@ Untuk berpindah ke branch lain, gunakan:
 git checkout nama_branch
 ```
 
-Atau dengan perintah yang lebih baru dan lebih ramah:
+Atau dengan perintah yang lebih baru dan lebih mudah:
 
 ```bash
 git switch nama_branch
@@ -70,6 +70,9 @@ git checkout -b fitur-baru
 # atau
 git switch -c fitur-baru
 ```
+
+!!! note
+    Kenapa ada dua jenis perintah? Perintah `checkout` merupakan perintah lama di Git yang tidak hanya dipakai untuk branching. Karena fungsinya banyak, perintah ini menjadi membingungkan dan terkadang jadi salah pakai. Perintah `switch` baru ada sekitar tahun 2019 dan **hanya khusus** untuk mengelola branch. Perintah ini ada untuk menghindari kebingungan dan kesalahan yang terjadi akibat perintah `checkout`.
 
 ---
 
@@ -93,7 +96,7 @@ Setelah selesai bekerja di branch, kamu bisa menggabungkan perubahan ke branch u
 
 ---
 
-## Merge Conflict: Saat Git Bingung
+## Merge Conflict
 
 Terkadang, Git tidak bisa menggabungkan branch secara otomatis. Ini terjadi jika baris yang sama di file yang sama diubah di kedua branch. Ini disebut **Merge Conflict**.
 
@@ -108,6 +111,7 @@ Ini kode di branch fitur
 ```
 
 **Cara mengatasi:**
+
 1.  Hapus penanda (`<<<<`, `====`, `>>>>`).
 2.  Pilih kode mana yang benar (atau gabungkan keduanya).
 3.  Simpan file.
