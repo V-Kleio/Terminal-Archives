@@ -205,4 +205,5 @@ Kamu bisa menjalankan beberapa perintah sekaligus dalam satu baris:
 
 ---
 
-[Kembali ke Intro](01_intro.md){ .md-button .md-button--primary }
+[Kembali ke Terminal](01_intro.md){ .md-button .md-button--primary }
+[Lanjut ke Scripting](../module2/01_shebang.md){ .md-button .md-button--primary }

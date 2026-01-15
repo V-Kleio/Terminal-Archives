@@ -129,3 +129,30 @@ nav:
     - Wildcards: module1/05_text_power.md
     - IO Redirection: module1/06_io_redirection.md
     - Appendix: module1/99_additional.md
+
+  - Scripting:
+    - Intro to Scripting: module2/01_shebang.md
+    - Variables: module2/02_variables.md
+    - User Input: module2/03_user_input.md
+    - Flow Control: module2/04_flow_control.md
+    - Loops: module2/05_loops.md
+    - Function: module2/06_function.md
+    - Exit Code: module2/07_exit_code.md
+    - Appendix: module2/99_additional.md
+
+  - Git Local:
+    - Intro to Git: module3/01_intro.md
+    - Configuration: module3/02_configuration.md
+    - Basic Commits: module3/03_git_basics.md
+    - Branching: module3/04_branching.md
+    - Undoing Changes: module3/05_recovery.md
+    - Appendix: module3/99_additional.md
+
+  - Git Remote:
+    - Intro to Remote: module4/01_intro_remote.md
+    - Authentication: module4/02_auth.md
+    - Syncing (Push/Pull): module4/03_sync.md
+    - Workflows (PR/MR): module4/04_workflows.md
+    - GitFlow Strategy: module4/05_gitflow.md
+    - Tags & Releases: module4/06_tags_releases.md
+    - Appendix: module4/99_additional.md

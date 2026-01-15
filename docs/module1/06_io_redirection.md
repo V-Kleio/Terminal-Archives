@@ -122,5 +122,5 @@ Saatnya, kamu belajar **scripting**, yaitu proses otomasi dengan membuat perinta
     Module-module setelah ini juga paling relevan digunakan dalam workflow programming.
     Tapi, ini hanyalah rekomendasi. Kalau kalian tetap ingin lanjut membaca, silakan saja.
 
-[Lanjut ke Next Module](../module2/01_intro.md){ .md-button .md-button--primary }
+[Lanjut ke Scripting](../module2/01_shebang.md){ .md-button .md-button--primary }
 [Appendix](99_additional.md){ .md-button .md-button--primary }
