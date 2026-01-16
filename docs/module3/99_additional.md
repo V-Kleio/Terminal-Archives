@@ -10,7 +10,7 @@
 Bayangkan kamu sedang asyik ngoding di branch `feature-a`, tiba-tiba ada bug urgent di `main` yang harus segera diperbaiki. Tapi, kodemu di `feature-a` belum selesai dan belum siap di-commit.
 Jangan panik, gunakan `git stash`.
 
-Fitur ini akan "menyembunyikan" perubahanmu sementara waktu agar working directory-mu bersih kembali.
+Fitur ini akan menyembunyikan perubahanmu sementara waktu agar working directory-mu bersih kembali.
 
 - **Simpan perubahan sementara**:
     ```bash
@@ -82,8 +82,7 @@ Jika hanya ingin melihat-lihat, cukup kembali ke masa kini dengan: `git switch m
 
 Terkadang kamu tidak ingin menggabungkan (merge) seluruh branch, melainkan hanya ingin mengambil **satu commit tertentu** dari branch lain.
 
-Contoh kasus:
-Kamu punya branch `fitur-a` dan `fitur-b`. Ada perbaikan bug penting di `fitur-a` (commit hash: `a1b2c3d`) yang juga dibutuhkan di `fitur-b`, tapi kamu belum mau merge semuanya.
+Misalnya, kamu punya branch `fitur-a` dan `fitur-b`. Ada perbaikan bug penting di `fitur-a` (commit hash: `a1b2c3d`) yang juga dibutuhkan di `fitur-b`, tapi kamu belum mau merge semuanya.
 
 Caranya:
 
@@ -101,10 +100,10 @@ Git akan mengambil perubahan dari commit tersebut dan menempelkannya di branch k
 Selain `merge`, ada cara lain untuk menggabungkan perubahan, yaitu `rebase`.
 Bedanya:
 
-- **Merge**: Membuat "cabang" history yang bertemu di satu titik (merge commit). Aman tapi bisa berantakan.
+- **Merge**: Membuat history yang bertemu di satu titik (merge commit). Aman tapi bisa berantakan.
 - **Rebase**: Memindahkan titik dasar branch kamu ke ujung branch lain.
 
-Hasilnya? History-mu akan terlihat lurus dan rapi seolah-olah semua dikerjakan berurutan tanpa branching.
+History-mu akan terlihat lurus dan rapi seolah-olah semua dikerjakan berurutan tanpa branching.
 
 ```bash
 # Pastikan kamu di branch fitur
@@ -115,7 +114,7 @@ git rebase main
 ```
 
 !!! danger "Peraturan Utama Rebase"
-    **JANGAN PERNAH** melakukan rebase pada branch publik (branch yang dipakai bersama tim) yang sudah di-push ke remote. Rebase mengubah sejarah, dan ini bisa membuat teman timmu menderita konflik yang parah. Gunakan rebase hanya untuk merapikan branch lokalmu sendiri sebelum di-merge.
+    **JANGAN PERNAH** melakukan rebase pada branch publik (branch yang dipakai bersama tim) yang sudah di-push ke remote. Rebase mengubah history, dan ini bisa membuat teman timmu menderita konflik yang parah. Gunakan rebase hanya untuk merapikan branch lokalmu sendiri sebelum di-merge.
 
 [Kembali ke Git](01_intro.md){ .md-button .md-button--primary }
-[Lanjut ke GitHub](../module4/01_github.md){ .md-button .md-button--primary }
+[Lanjut ke Git Remote](../module4/01_intro_remote.md){ .md-button .md-button--primary }

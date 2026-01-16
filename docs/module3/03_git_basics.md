@@ -13,7 +13,7 @@ Di bagian ini, kita akan membahas siklus hidup file dalam Git, bagaimana cara me
 
 ## The Three States of Git
 
-Git membagi status file kamu ke dalam tiga area utama. Memahami ini adalah kunci agar tidak bingung saat file "hilang" atau belum tersimpan.
+Git membagi status file kamu ke dalam tiga area utama.
 
 1.  **Working Directory**: Tempat kamu bekerja (ngoding, edit, hapus file). Perubahan di sini belum disimpan Git secara permanen.
 2.  **Staging Area (Index)**: Kamu memilih file mana saja yang **akan** di-commit (snapshot) oleh Git.
@@ -70,7 +70,7 @@ git commit -m "Menambahkan fitur login"
 
 ## 5. Melihat Masa Lalu: `git log`
 
-Melihat daftar riwayat snapshot yang pernah kamu buat.
+Melihat daftar history snapshot yang pernah kamu buat.
 
 ```bash
 git log
@@ -84,7 +84,7 @@ Kamu akan melihat hash (ID unik), author, tanggal, dan pesan commit.
 
 ## Melihat Perbedaan: `git diff`
 
-Kadang kamu lupa, "Tadi saya ubah baris yang mana ya?".
+Mungkin terkadang kamu lupa apa yang sudah kamu ubah.
 
 - **`git diff`**: Membandingkan Working Directory vs Staging Area (apa yang belum di-add).
 - **`git diff --staged`**: Membandingkan Staging Area vs Repository (apa yang akan di-commit).

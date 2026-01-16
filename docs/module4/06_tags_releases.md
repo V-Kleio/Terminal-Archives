@@ -5,10 +5,10 @@
 
 ---
 
-## Tags & Releases: Menandai Sejarah
+## Tags & Releases
 
-Branch itu bergerak (pointer-nya pindah setiap commit baru). Tapi **Tag** itu diam.
-Tag digunakan untuk menandai titik spesifik dalam sejarah commit sebagai "Penting", biasanya untuk penomoran versi (Version Control).
+Pointer branch sering bergerak (pointer-nya pindah setiap commit baru), tapi **Tag** itu diam.
+Tag digunakan untuk menandai commit spesifik dalam history commit, biasanya untuk penomoran versi (Version Control).
 
 ---
 
@@ -19,6 +19,7 @@ Ada dua jenis tag: Lightweight dan Annotated. Gunakan **Annotated Tag** untuk ri
 ```bash
 git tag -a v1.0 -m "Versi 1.0 - Rilis Pertama"
 ```
+
 - `-a`: Annotated.
 - `-m`: Pesan tag.
 
@@ -29,7 +30,7 @@ git tag
 
 ## 2. Push Tag ke Remote
 
-`git push` biasa TIDAK mengirim tag. Kamu harus kirim manual.
+`git push` biasa **TIDAK** mengirim tag. Kamu harus kirim manual.
 
 ```bash
 git push origin v1.0
@@ -62,6 +63,7 @@ Format penomoran versi yang standar: **MAJOR.MINOR.PATCH** (contoh: v2.1.4).
 
 ## Next Step
 
-Materi inti Remote Repository selesai! Lihat appendix untuk manajemen proyek (Issues & Wiki).
+Selamat! Kamu telah menyelesaikan The Terminal Archives.
+
 
 [Lihat Appendix](99_additional.md){ .md-button .md-button--primary }

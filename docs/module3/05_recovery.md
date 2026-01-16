@@ -7,7 +7,6 @@
 
 ## Disaster Recovery: Mengatasi Kesalahan di Git
 
-Tidak ada yang sempurna, termasuk saat bekerja dengan Git.
 Terkadang kamu melakukan perubahan yang salah, menghapus file penting, atau commit yang tidak diinginkan.
 Untungnya, Git menyediakan berbagai cara untuk memulihkan keadaan dan membatalkan perubahan.
 
@@ -31,7 +30,7 @@ git restore --staged nama_file.txt
 
 ---
 
-## Kesalahan Kecil: `git commit --amend`
+## Memperbaiki Kesalahan Kecil: `git commit --amend`
 
 Pernahkah kamu baru saja melakukan commit, lalu sadar ada typo di pesannya? Atau ada file yang lupa di-`add`?
 Daripada melakukan reset, kamu bisa memperbaiki commit terakhir tersebut.
@@ -87,9 +86,9 @@ git reset --hard HEAD~1
 
 ---
 
-## Membatalkan Commit Tanpa Mengubah Riwayat: `git revert`
+## Membatalkan Commit Tanpa Mengubah History: `git revert`
 
-Jika commit sudah terlanjur di-push ke remote atau kamu ingin membatalkan commit tanpa menghapus riwayat, gunakan:
+Jika commit sudah terlanjur di-push ke remote atau kamu ingin membatalkan commit tanpa menghapus history, gunakan:
 
 ```bash
 git revert <hash_commit>
@@ -125,5 +124,5 @@ Lihat caranya di [Appendix: Alias Git](99_additional.md#alias-untuk-efisiensi).
 Sekarang kamu sudah jago dalam mengelola repository lokalmu, mulai dari inisialisasi, branching, hingga memperbaiki kesalahan.
 Langkah selanjutnya adalah membawa kodemu ke cloud agar bisa berkolaborasi dengan orang lain.
 
-[Lanjut ke GitHub](../module4/01_github.md){ .md-button .md-button--primary }
+[Lanjut ke Git Remote](../module4/01_intro_remote.md){ .md-button .md-button--primary }
 [Appendix](99_additional.md){ .md-button .md-button--primary }

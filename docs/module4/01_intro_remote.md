@@ -7,8 +7,8 @@
 
 ## Apa itu Remote Repository?
 
-Sampai sejauh ini, repository Git kamu hanya hidup di laptopmu sendiri (Local Repository).
-Jika laptopmu rusak, kodenya hilang. Jika temanmu ingin membantu koding, mereka tidak bisa akses.
+Sampai saat ini, repository Git kamu hanya ada di laptopmu sendiri (Local Repository).
+Jika laptopmu rusak, kodenya akan hilang. Jika temanmu ingin ikut ngoding di repository yang sama, mereka tidak akan bisa akses.
 
 **Remote Repository** adalah versi repository-mu yang di-host di server (internet atau jaringan lokal).
 Dengan remote repository, kamu bisa menyimpan backup kode dan berkolaborasi dengan orang lain.
@@ -19,13 +19,13 @@ Dengan remote repository, kamu bisa menyimpan backup kode dan berkolaborasi deng
 
 Git adalah alatnya (tool), sedangkan hosting adalah tempat penyimpanannya. Ada banyak layanan hosting Git:
 
-- **GitHub**: Paling populer, dimiliki Microsoft. Istilah khas: *Pull Request*.
-- **GitLab**: Populer untuk DevOps/CI-CD, bisa di-install di server sendiri. Istilah khas: *Merge Request*.
-- **Bitbucket**: Populer di lingkungan korporat (integrasi Jira).
-- **Azure DevOps**: Solusi enterprise dari Microsoft.
+- **GitHub**: Paling populer, punyanya Microsoft.
+- **GitLab**: Populer untuk DevOps/CI-CD, bisa di-install di server sendiri.
+- **Bitbucket**: Banyak digunakan di lingkungan korporat (bisa integrasi dengan Jira).
+- **Azure DevOps**: Dari Microsoft juga.
 
-!!! note "Konsep Universal"
-    Panduan di modul ini menggunakan contoh **GitHub**, tapi 95% perintah dan konsepnya (push, pull, clone, remote) berlaku sama persis untuk GitLab, Bitbucket, dll.
+!!! note
+    Panduan di modul ini menggunakan contoh **GitHub**, tapi 95% perintah dan konsepnya (push, pull, clone, remote) berlaku sama persis untuk GitLab, Bitbucket, dll. Akan ada perbedaan sedikit seperti istilah *Pull Request* di GitHub disebut dengan *Merge Request* di GitLab.
 
 ---
 
@@ -41,5 +41,9 @@ Biasanya, kamu akan:
 ---
 
 ## Next Step
+
+Dengan menggunakan layanan hosting Git, kode kamu bisa ada di cloud sebagai backup.
+Repositori Git kamu juga bisa dilihat dan diakses oleh orang lain bahkan orang lain juga bisa memberi kontribusi.
+Selanjutnya, kita akan melihat cara untuk menyambungkan Git lokal dengan layanan hosting Git.
 
 [Lanjut ke Autentikasi SSH](02_auth.md){ .md-button .md-button--primary }
