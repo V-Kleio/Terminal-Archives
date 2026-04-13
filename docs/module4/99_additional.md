@@ -72,11 +72,12 @@ Format dasar:
 ### Tipe Commit Umum
 -   **feat**: Fitur baru (e.g., `feat: add dark mode toggle`).
 -   **fix**: Perbaikan bug (e.g., `fix: crashing on login page`).
--   **docs**: Perubahan dokumentasi saja.
+-   **docs**: Perubahan dokumentasi atau komentar (e.g., `docs: update copyright year`).
 -   **style**: Perubahan format (spasi, titik koma) tanpa ubah logika (e.g., `style: format code with prettier`).
--   **refactor**: Perubahan kode yang bukan fix atau fitur (e.g., `refactor: simplify auth logic`).
--   **test**: Menambah atau memperbaiki test module.
+-   **refactor**: Perubahan kode yang bukan fix atau fitur, perubahan struktur (e.g., `refactor: simplify auth logic`).
+-   **test**: Menambah atau memperbaiki test module (e.g., `test: add unit test for math module`).
 -   **chore**: Tugas lain-lain (e.g., `chore: update dependencies`).
+-   **nit**: perubahan kecil (nitpick), tidak signifikan, biasanya dari code review (non-standar) (e.g., `nit: reorder imports for consistency`). Dalam beberapa konvensi, bisa tidak digunakan. Biasanya digantikan oleh `docs`, `style`, atau `chore`.
 
 ### Contoh Penerapan
 ```text
