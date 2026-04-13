@@ -1,13 +1,13 @@
 site_name: The Terminal Archives
 site_description: Comprehensive Shell & Git Documentation
 site_author: "KleioV"
-site_url: https://YOUR_USERNAME.github.io/terminal-archives/
-repo_url: https://github.com/YOUR_USERNAME/terminal-archives
+site_url: https://v-kleio.github.io/terminal-archives/
+repo_url: https://github.com/v-kleio/terminal-archives
 repo_name: terminal-archives
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 2025 Rafael Marchel D. Wijaya
+copyright: Copyright &copy; 2026 Rafael Marchel D. Wijaya
 
 # Theme Configuration
 theme:
@@ -115,7 +115,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/YOUR_USERNAME
 
-  generator: false  # Remove "Made with Material for MkDocs"
+  generator: false
 
 # Navigation Structure
 nav:
