@@ -113,7 +113,7 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/YOUR_USERNAME
+      link: https://github.com/v-kleio
 
   generator: false
 
