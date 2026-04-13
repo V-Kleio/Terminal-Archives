@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+.stamp-box {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px 10px 5px 0;
+    border: 3px solid rgba(139, 0, 0, 0.6);
+    border-radius: 4px;
+    background-color: rgba(139, 0, 0, 0.05);
+    color: #8b0000;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: rotate(-2deg);
+    box-shadow:
+        inset 0 0 10px rgba(139, 0, 0, 0.1),
+        2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    filter: contrast(1.2);
+}
+
+.stamp-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    border-radius: 2px;
+    margin: 2px;
+    pointer-events: none;
+}
+
+.stamp-box:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+/* Dark mode adjustments for stamp */
+[data-md-color-scheme="slate"] .stamp-box {
+    border-color: rgba(220, 20, 60, 0.7);
+    background-color: rgba(220, 20, 60, 0.08);
+    color: #dc143c;
+    box-shadow:
+        inset 0 0 10px rgba(220, 20, 60, 0.15),
+        2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+[data-md-color-scheme="slate"] .stamp-box::before {
+    border-color: rgba(220, 20, 60, 0.4);
+}
+
+
+.redacted {
+    background-color: #000;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 2px;
+    position: relative;
+    cursor: help;
+    user-select: none;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.redacted::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    border-radius: 2px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.redacted:hover {
+    color: #8b0000;
+    background-color: rgba(139, 0, 0, 0.1);
+}
+
+.redacted:hover::before {
+    opacity: 0;
+}
+
+/* Dark mode adjustments for redacted */
+[data-md-color-scheme="slate"] .redacted {
+    background-color: #1a1a1a;
+    color: #1a1a1a;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .redacted::before {
+    background: #1a1a1a;
+}
+
+[data-md-color-scheme="slate"] .redacted:hover {
+    color: #dc143c;
+    background-color: rgba(220, 20, 60, 0.1);
+}
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.3;
+    z-index: 1;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px);
+}
+
+/* Evidence Tag - Yellow crime scene marker */
+.evidence {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 0 4px;
+    background-color: #ffeb3b;
+    color: #000;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 0.85em;
+    border: 2px dashed #000;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.evidence::before {
+    content: '⚠ EVIDENCE #';
+    margin-right: 2px;
+}
+
+[data-md-color-scheme="slate"] .evidence {
+    background-color: #ffd700;
+    border-color: #333;
+}
+
+/* Case File Folder - Manila folder aesthetic */
+.case-file {
+    background-color: #d4af87;
+    border: 2px solid #8b7355;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.case-file::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 80px;
+    height: 10px;
+    background-color: #c19a6b;
+    border: 2px solid #8b7355;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.case-file h3 {
+    margin-top: 0;
+    color: #8b0000;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+}
+
+[data-md-color-scheme="slate"] .case-file {
+    background-color: #3a3026;
+    border-color: #6b5d4f;
+}
+
+[data-md-color-scheme="slate"] .case-file::before {
+    background-color: #2a2419;
+    border-color: #6b5d4f;
+}
+
+.handwritten {
+    padding: 30px 16px;
+    background: #f7f3b7;
+    color: #1a1a1a;
+
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.3);
+
+    transform: rotate(-0.6deg);
+}
+
+
+/* Dark Mode: Dark File Folder styling */
+[data-md-color-scheme="slate"] .handwritten {
+    background-color: #2a2a2a;
+    background-image: linear-gradient(to bottom right, #2a2a2a, #222);
+    color: #e0e0e0;
+    border-left-color: #dc143c;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+/* Suspect Profile - Polaroid photo style */
+.suspect {
+    display: inline-block;
+    padding: 12px;
+    background-color: #fff;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.2),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: rotate(-3deg);
+    margin: 12px;
+    border: 1px solid #ddd;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.suspect:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.suspect img {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.suspect-name {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+    padding-top: 8px;
+}
+
+[data-md-color-scheme="slate"] .suspect {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+[data-md-color-scheme="slate"] .suspect-name {
+    color: #e6e6e6;
+}
+
+/* Timeline Marker - Investigation timestamps */
+.timeline {
+    border-left: 3px solid #8b0000;
+    padding-left: 20px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.timeline::before {
+    content: '●';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    color: #8b0000;
+    font-size: 1.2em;
+    background-color: var(--md-default-bg-color);
+}
+
+.timeline-date {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #8b0000;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+[data-md-color-scheme="slate"] .timeline {
+    border-left-color: #dc143c;
+}
+
+[data-md-color-scheme="slate"] .timeline::before {
+    color: #dc143c;
+}
+
+[data-md-color-scheme="slate"] .timeline-date {
+    color: #dc143c;
+}
+
+/* Blood Splatter Warning (use sparingly!) */
+.blood-warning {
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #4a0404;
+
+    border: 2px solid #8b0000;
+    box-shadow: 0 0 8px rgba(139, 0, 0, 0.6), inset 0 0 20px rgba(139, 0, 0, 0.2);
+
+    background: linear-gradient(145deg, rgba(255, 240, 240, 1) 0%, rgba(139, 0, 0, 0.15) 100%);
+
+    border-radius: 2px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-left: 6px solid #8b0000;
+}
+
+/* The Label "CAUTION" styling */
+.blood-warning strong {
+    color: #8b0000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.blood-warning::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: 35px;
+    width: 8px;
+    height: 45px;
+    background: #8b0000;
+    border-radius: 0 0 10px 10px;
+    box-shadow: inset 1px -2px 3px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.blood-warning::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: 20px;
+    width: 12px;
+    height: 25px;
+    background: #8b0000;
+    border-radius: 0 0 10px 10px;
+    box-shadow: inset 2px -2px 4px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* Dark Mode Adjustments */
+[data-md-color-scheme="slate"] .blood-warning {
+    background: linear-gradient(145deg, rgba(40, 0, 0, 0.6) 0%, rgba(20, 0, 0, 0.9) 100%);
+    color: #ffb3b3;
+    border-color: #ff0000;
+    border-left-color: #dc143c;
+}
+
+[data-md-color-scheme="slate"] .blood-warning::before,
+[data-md-color-scheme="slate"] .blood-warning::after {
+    background: #dc143c;
+}
+
+/* Police Tape */
+.police-tape {
+    background: repeating-linear-gradient(
+        45deg,
+        #ffeb3b,
+        #ffeb3b 20px,
+        #000 20px,
+        #000 40px
+    );
+    color: #000;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    text-shadow:
+        1px 1px 0 #ffeb3b,
+        -1px -1px 0 #ffeb3b,
+        1px -1px 0 #ffeb3b,
+        -1px 1px 0 #ffeb3b;
+}
+
+/* Dark mode police tape */
+[data-md-color-scheme="slate"] .police-tape {
+    text-shadow:
+        1px 1px 0 #ffd700,
+        -1px -1px 0 #ffd700,
+        1px -1px 0 #ffd700,
+        -1px 1px 0 #ffd700;
+}
+
+/* Witness Statement */
+.witness {
+    position: relative;
+    background-color: #eae6da;
+    color: #1a1a1a;
+    padding: 20px;
+    margin: 24px 0;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    line-height: 1.4;
+
+    clip-path: polygon(
+    0% 2%,
+    5% 0%,
+    10% 2%,
+    16% 1%,
+    22% 3%,
+    30% 1%,
+    38% 2%,
+    46% 0%,
+    55% 2%,
+    64% 1%,
+    72% 3%,
+    80% 1%,
+    88% 2%,
+    94% 0%,
+    100% 2%,
+
+    100% 100%,
+
+    97% 92%, 94% 100%, 90% 88%, 86% 100%,
+    82% 90%, 78% 100%, 73% 85%, 69% 100%,
+    64% 93%, 60% 100%, 55% 87%, 50% 100%,
+    46% 91%, 42% 100%, 37% 86%, 33% 100%,
+    28% 94%, 23% 100%, 18% 89%, 13% 100%,
+    8% 93%, 4% 100%, 0% 95%
+    );
+
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2))
+            drop-shadow(0 -1px 1px rgba(0,0,0,0.1));
+
+    background-image:
+        linear-gradient(to bottom, rgba(0,0,0,0.04), transparent 20%),
+        linear-gradient(to top, rgba(0,0,0,0.05), transparent 25%);
+
+}
+
+.witness::before {
+    content: 'OFFICIAL STATEMENT';
+    display: block;
+    font-family: Impact, sans-serif;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #1a1a1a;
+    margin-bottom: 10px;
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
+
+/* Dark Mode: Old Newspaper in the dark */
+[data-md-color-scheme="slate"] .witness {
+    background-color: #4a463d;
+    color: #e6e6e6;
+}
+[data-md-color-scheme="slate"] .witness::before {
+    border-bottom-color: #e6e6e6;
+}
+
+.tape {
+    position: relative;
+}
+
+.tape::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(1.5deg);
+
+    width: 120px;
+    height: 35px;
+
+    background-color: rgba(190,190,190,0.4);
+    border-left: 1px solid rgba(190,190,190,0.3);
+    border-right: 1px solid rgba(190,190,190,0.3);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+
+    backdrop-filter: blur(1px);
+    opacity: 0.8;
+}
